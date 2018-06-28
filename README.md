@@ -1,7 +1,7 @@
 # MicroCoin daemon
 
 ## How to build
-1. Clone git repositore
+1. Clone git repository
 2. Init submodules
 3. Run lazbuild microcoind.lpi
 4. Run daemon
