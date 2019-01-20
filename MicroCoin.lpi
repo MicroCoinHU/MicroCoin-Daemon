@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+        <MainUnitHasTitleStatement Value="False"/>
+        <MainUnitHasScaledStatement Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="MicroCoin"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <MinorVersionNr Value="3"/>
+      <RevisionNr Value="2"/>
+      <BuildNr Value="1"/>
+      <StringTable ProductName="MicroCoin"/>
+    </VersionInfo>
+    <BuildModes Count="2">
+      <Item1 Name="Default" Default="True"/>
+      <Item2 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="mcd"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
+            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
+            <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <TargetCPU Value="x86_64"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+          </Linking>
+        </CompilerOptions>
+      </Item2>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
+    </RunParams>
+    <Units Count="69">
+      <Unit0>
+        <Filename Value="MicroCoin.dpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="src\MicroCoin\Account\MicroCoin.Account.AccountKey.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="src\MicroCoin\Account\MicroCoin.Account.Data.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="src\MicroCoin\Account\MicroCoin.Account.RPC.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="src\MicroCoin\Account\MicroCoin.Account.Storage.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="src\MicroCoin\Account\MicroCoin.Account.Transaction.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="src\MicroCoin\Application\MicroCoin.Application.Settings.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.Base.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.Block.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.BlockHeader.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.BlockManager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.Events.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.FileStorage.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.Protocol.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="src\MicroCoin\BlockChain\MicroCoin.BlockChain.Storage.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="src\MicroCoin\Common\MicroCoin.Common.AppSettings.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="src\MicroCoin\Common\MicroCoin.Common.IniFileSettings.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="src\MicroCoin\Common\MicroCoin.Common.Lists.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="src\MicroCoin\Common\MicroCoin.Common.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="src\MicroCoin\Deprecated\UAES.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="src\MicroCoin\Deprecated\UBaseTypes.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="src\MicroCoin\Deprecated\UChunk.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="src\MicroCoin\Deprecated\UCrypto.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="src\MicroCoin\Deprecated\UECIES.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="src\MicroCoin\Deprecated\UJSONFunctions.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="src\MicroCoin\Deprecated\ULog.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="src\MicroCoin\Deprecated\UTCPIP.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="src\MicroCoin\Deprecated\UThread.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="src\MicroCoin\Deprecated\UTime.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="src\MicroCoin\Deprecated\UWalletKeys.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="src\MicroCoin\Keys\MicroCoin.Keys.KeyManager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="src\MicroCoin\Mining\MicroCoin.Mining.Common.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="src\MicroCoin\Mining\MicroCoin.Mining.Server.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Client.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Connection.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.ConnectionBase.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.ConnectionManager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Discovery.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Events.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.INetNotificationSource.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.NodeServer.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Protocol.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Server.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Statistics.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Time.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.Utils.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="src\MicroCoin\Node\MicroCoin.Node.Events.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit46>
+      <Unit47>
+        <Filename Value="src\MicroCoin\Node\MicroCoin.Node.Node.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit47>
+      <Unit48>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.Client.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit48>
+      <Unit49>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.Handler.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit49>
+      <Unit50>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.MethodHandler.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit50>
+      <Unit51>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.Plugin.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit51>
+      <Unit52>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.PluginManager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.Result.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="src\MicroCoin\RPC\MicroCoin.RPC.Server.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="src\MicroCoin\Transaction\MicroCoin.Transaction.Base.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="src\MicroCoin\Transaction\MicroCoin.Transaction.Events.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="src\MicroCoin\Transaction\MicroCoin.Transaction.HashTree.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="src\MicroCoin\Transaction\MicroCoin.Transaction.ITransaction.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="src\MicroCoin\Transaction\MicroCoin.Transaction.Manager.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="src\MicroCoin\Transaction\MicroCoin.Transaction.Transaction.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="src\MicroCoin\Transaction\Lists\MicroCoin.Transaction.TransactionList.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.ChangeAccountInfo.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.ChangeKey.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.CreateSubAccount.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.ListAccount.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.RecoverFounds.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.TransferMoney.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="src\MicroCoin\Application\MicroCoin.Console.Application.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit68>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="mcd"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
+      <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <TargetCPU Value="x86_64"/>
+    </CodeGeneration>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>
