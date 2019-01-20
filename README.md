@@ -2,6 +2,8 @@
 
 [![GitHub license](https://img.shields.io/github/license/MicroCoinHU/microcoind.svg)](https://github.com/MicroCoinHU/microcoind/blob/master/LICENSE)
 
+This is the MicroCoin daemon / console application.
+
 ## How to build
 ### Lazarus
 1. Clone git repository
