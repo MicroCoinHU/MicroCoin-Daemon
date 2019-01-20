@@ -76,7 +76,7 @@
     </RunParams>
     <Units Count="69">
       <Unit0>
-        <Filename Value="MicroCoin.dpr"/>
+        <Filename Value="MicroCoinD.dpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
