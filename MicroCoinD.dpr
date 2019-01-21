@@ -38,14 +38,14 @@ program MicroCoinD;
 uses
   {$IFDEF LINUX}
   cthreads,
-  {$ENDIF}
+  {$ENDIF }
   {$IFDEF DEBUG}
   FastMM4,
-  {$ENDIF}
+  {$ENDIF }
   {$IFDEF MSWINDOWS}
   windows,
   Messages,
-  {$ENDIF}
+  {$ENDIF }
   Classes,
   sysutils,
   MicroCoin.Account.AccountKey in 'src\MicroCoin\Account\MicroCoin.Account.AccountKey.pas',
@@ -115,7 +115,11 @@ uses
   MicroCoin.Transaction.ListAccount in 'src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.ListAccount.pas',
   MicroCoin.Transaction.RecoverFounds in 'src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.RecoverFounds.pas',
   MicroCoin.Transaction.TransferMoney in 'src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.TransferMoney.pas',
-  MicroCoin.Console.Application in 'src\MicroCoin\Application\MicroCoin.Console.Application.pas';
+  MicroCoin.Console.Application in 'src\MicroCoin\Application\MicroCoin.Console.Application.pas',
+  MicroCoin.Net.CommandHandler in 'src\MicroCoin\Net\MicroCoin.Net.CommandHandler.pas',
+  MicroCoin.Net.Handlers.Hello in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Hello.pas',
+  MicroCoin.Net.Handlers.Message in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Message.pas',
+  MicroCoin.Net.Handlers.NewBlock in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewBlock.pas';
 
 var quit : boolean;
 
