@@ -9,5 +9,5 @@ before_install:
   - sudo apt-get install -y lazarus-1.6
 
 script:
-  - /usr/lib/lazarus/1.6/lazbuild MicroCoinD.lpi
+  - /usr/bin/lazbuild MicroCoinD.lpi
 
