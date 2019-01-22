@@ -31,6 +31,8 @@ program MicroCoinD;
 
 {$ifdef fpc}
  {$mode delphi}
+{$else}
+ {$WEAKLINKRTTI ON}
 {$endif}
 
 {$R *.res}
@@ -41,11 +43,12 @@ uses
   {$ENDIF }
   {$IFDEF DEBUG}
   FastMM4,
-  {$ENDIF }
+  {$ENDIF}
   {$IFDEF MSWINDOWS}
   windows,
   Messages,
-  {$ENDIF }
+  System.Console,
+  {$ENDIF}
   Classes,
   sysutils,
   MicroCoin.Account.AccountKey in 'src\MicroCoin\Account\MicroCoin.Account.AccountKey.pas',
@@ -117,15 +120,19 @@ uses
   MicroCoin.Transaction.TransferMoney in 'src\MicroCoin\Transaction\Plugins\MicroCoin.Transaction.TransferMoney.pas',
   MicroCoin.Console.Application in 'src\MicroCoin\Application\MicroCoin.Console.Application.pas',
   MicroCoin.Net.CommandHandler in 'src\MicroCoin\Net\MicroCoin.Net.CommandHandler.pas',
+  MicroCoin.Net.Handlers.AccountStorage in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.AccountStorage.pas',
+  MicroCoin.Net.Handlers.GetBlocks in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.GetBlocks.pas',
+  MicroCoin.Net.Handlers.GetOpBlocks in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.GetOpBlocks.pas',
   MicroCoin.Net.Handlers.Hello in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Hello.pas',
   MicroCoin.Net.Handlers.Message in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Message.pas',
-  MicroCoin.Net.Handlers.NewBlock in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewBlock.pas';
+  MicroCoin.Net.Handlers.NewBlock in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewBlock.pas',
+  MicroCoin.Net.Handlers.NewTransaction in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewTransaction.pas';
 
 var quit : boolean;
 
   type
     ConsoleThread  = class(TThread)
-      procedure execute; override;
+      procedure Execute; override;
     end;
 
 { ConsoleThread }
@@ -135,22 +142,30 @@ var
   c:Char;
 begin
   repeat
-  Read(c);
+    if Console.KeyAvailable
+    then c := Console.ReadKey.KeyChar;
+    Sleep(1000);
+    TLog.NewLog(ltdebug, '', '');
   until c='q';
   quit := true;
 end;
 
 begin
+  {$IFDEF MSWINDOWS}
+//    Console.BufferHeight := 20;
+  {$ENDIF}
   quit := false;
   with TMicroCoinApplication.Create do begin
     ConsoleThread.Create(false);
     {$IFDEF MSWINDOWS}
     SetConsoleTitle('MicroCoin');
+//    SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE), GetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE)));
     {$ENDIF}
     while not quit do begin
       CheckSynchronize(1);
     end;
     Terminate;
+    OutputDebugString ('IMJ');
   end;
   try
   except
