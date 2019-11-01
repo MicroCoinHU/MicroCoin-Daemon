@@ -22,7 +22,7 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="3"/>
       <RevisionNr Value="2"/>
-      <BuildNr Value="5"/>
+      <BuildNr Value="6"/>
       <StringTable ProductName="MicroCoin"/>
     </VersionInfo>
     <BuildModes Count="2">
@@ -404,8 +404,8 @@
       <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
-      <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
+      <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty;src\MicroCoin\3rdParty\fpc\inc"/>
+      <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account;src\MicroCoin\3rdParty\fpc"/>
       <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>
