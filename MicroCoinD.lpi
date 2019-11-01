@@ -22,10 +22,10 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="3"/>
       <RevisionNr Value="2"/>
-      <BuildNr Value="4"/>
+      <BuildNr Value="5"/>
       <StringTable ProductName="MicroCoin"/>
     </VersionInfo>
-    <BuildModes Count="5">
+    <BuildModes Count="2">
       <Item1 Name="Default" Default="True"/>
       <Item2 Name="Debug">
         <CompilerOptions>
@@ -64,90 +64,6 @@
           </Linking>
         </CompilerOptions>
       </Item2>
-      <Item3 Name="Linux">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <PathDelim Value="\"/>
-          <Target>
-            <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
-            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
-            <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <SmartLinkUnit Value="True"/>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="linux"/>
-            <Optimizations>
-              <OptimizationLevel Value="3"/>
-            </Optimizations>
-          </CodeGeneration>
-          <Linking>
-            <Debugging>
-              <GenerateDebugInfo Value="False"/>
-            </Debugging>
-            <LinkSmart Value="True"/>
-          </Linking>
-        </CompilerOptions>
-      </Item3>
-      <Item4 Name="Windows">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <PathDelim Value="\"/>
-          <Target>
-            <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
-            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
-            <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <SmartLinkUnit Value="True"/>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="win64"/>
-            <Optimizations>
-              <OptimizationLevel Value="3"/>
-            </Optimizations>
-          </CodeGeneration>
-          <Linking>
-            <Debugging>
-              <GenerateDebugInfo Value="False"/>
-            </Debugging>
-            <LinkSmart Value="True"/>
-          </Linking>
-        </CompilerOptions>
-      </Item4>
-      <Item5 Name="MAC">
-        <CompilerOptions>
-          <Version Value="11"/>
-          <PathDelim Value="\"/>
-          <Target>
-            <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
-          </Target>
-          <SearchPaths>
-            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
-            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
-            <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
-          </SearchPaths>
-          <CodeGeneration>
-            <SmartLinkUnit Value="True"/>
-            <TargetCPU Value="x86_64"/>
-            <TargetOS Value="macos"/>
-            <Optimizations>
-              <OptimizationLevel Value="3"/>
-            </Optimizations>
-          </CodeGeneration>
-          <Linking>
-            <Debugging>
-              <GenerateDebugInfo Value="False"/>
-            </Debugging>
-            <LinkSmart Value="True"/>
-          </Linking>
-        </CompilerOptions>
-      </Item5>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
