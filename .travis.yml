@@ -7,7 +7,10 @@ before_install:
 
 os:
   - linux
-  - osx
+
+env:
+  - LAZ_VER=1.9.0
 
 script:
   - lazbuild MicroCoinD.lpi
+

@@ -22,10 +22,10 @@
       <MajorVersionNr Value="1"/>
       <MinorVersionNr Value="3"/>
       <RevisionNr Value="2"/>
-      <BuildNr Value="3"/>
+      <BuildNr Value="4"/>
       <StringTable ProductName="MicroCoin"/>
     </VersionInfo>
-    <BuildModes Count="2">
+    <BuildModes Count="5">
       <Item1 Name="Default" Default="True"/>
       <Item2 Name="Debug">
         <CompilerOptions>
@@ -64,6 +64,90 @@
           </Linking>
         </CompilerOptions>
       </Item2>
+      <Item3 Name="Linux">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
+            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
+            <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="linux"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item3>
+      <Item4 Name="Windows">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
+            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
+            <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="win64"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item4>
+      <Item5 Name="MAC">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\MicroCoinD" ApplyConventions="False"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir);src\MicroCoin\Configuration;src\MicroCoin\Deprecated;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\3rdParty\fastmm;src\MicroCoin\3rdParty"/>
+            <OtherUnitFiles Value="src\MicroCoin\3rdParty\OpenSSL;src\MicroCoin\3rdParty\Synapse;src\MicroCoin\Crypto;src\MicroCoin\Common;src\MicroCoin\Account"/>
+            <UnitOutputDirectory Value="..\lib\$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="x86_64"/>
+            <TargetOS Value="macos"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+          </Linking>
+        </CompilerOptions>
+      </Item5>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -74,7 +158,7 @@
         <Mode0 Name="default"/>
       </Modes>
     </RunParams>
-    <Units Count="69">
+    <Units Count="80">
       <Unit0>
         <Filename Value="MicroCoinD.dpr"/>
         <IsPartOfProject Value="True"/>
@@ -351,6 +435,50 @@
         <Filename Value="src\MicroCoin\Application\MicroCoin.Console.Application.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit68>
+      <Unit69>
+        <Filename Value="src\MicroCoin\Net\MicroCoin.Net.CommandHandler.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.AccountStorage.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.GetBlocks.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit71>
+      <Unit72>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.GetOpBlocks.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit72>
+      <Unit73>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Hello.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit73>
+      <Unit74>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Message.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit74>
+      <Unit75>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewBlock.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit75>
+      <Unit76>
+        <Filename Value="src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewTransaction.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit76>
+      <Unit77>
+        <Filename Value="src\MicroCoin\Crypto\MicroCoin.Crypto.BigNum.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit77>
+      <Unit78>
+        <Filename Value="src\MicroCoin\Crypto\MicroCoin.Crypto.Errors.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit78>
+      <Unit79>
+        <Filename Value="src\MicroCoin\Crypto\MicroCoin.Crypto.Keys.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit79>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

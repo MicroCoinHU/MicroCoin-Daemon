@@ -47,8 +47,10 @@ uses
   {$IFDEF MSWINDOWS}
   windows,
   Messages,
+  {$IFNDEF FPC}
   System.Console,
-  {$ENDIF }
+  {$ENDIF}
+  {$ENDIF}
   Classes,
   sysutils,
   MicroCoin.Account.AccountKey in 'src\MicroCoin\Account\MicroCoin.Account.AccountKey.pas',
