@@ -9,7 +9,7 @@ os:
   - linux
 
 env:
-  - LAZ_VER=1.9.0
+  - LAZ_VER=2.0.0
 
 script:
   - lazbuild MicroCoinD.lpi
