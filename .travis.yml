@@ -2,6 +2,9 @@ sudo: required
 dist: trusty
 install: ./_travis-lazarus/.travis.install.py
 
+before_install:
+ - chmod +x ./_travis-lazarus/.travis.install.py
+
 os:
   - linux
   - osx
