@@ -99,7 +99,7 @@ uses
   MicroCoin.Node.Events in 'src\MicroCoin\Node\MicroCoin.Node.Events.pas',
   MicroCoin.Node.Node in 'src\MicroCoin\Node\MicroCoin.Node.Node.pas',
   MicroCoin.RPC.Client in 'src\MicroCoin\RPC\MicroCoin.RPC.Client.pas',
-  MicroCoin.RPC.Handler in 'src\MicroCoin\Rpc\MicroCoin.RPC.Handler.pas',
+  MicroCoin.RPC.Handler in 'src\MicroCoin\RPC\MicroCoin.RPC.Handler.pas',
   MicroCoin.RPC.MethodHandler in 'src\MicroCoin\RPC\MicroCoin.RPC.MethodHandler.pas',
   MicroCoin.RPC.Plugin in 'src\MicroCoin\RPC\MicroCoin.RPC.Plugin.pas',
   MicroCoin.RPC.PluginManager in 'src\MicroCoin\RPC\MicroCoin.RPC.PluginManager.pas',
@@ -145,6 +145,7 @@ var
   c:Char;
 begin
   c := 'a';
+  {$IFNDEF FPC}
   repeat
     if Console.KeyAvailable
     then c := Console.ReadKey.KeyChar;
@@ -152,6 +153,7 @@ begin
     TLog.NewLog(ltdebug, '', '');
   until c='q';
   quit := true;
+  {$ENDIF}
 end;
 
 begin

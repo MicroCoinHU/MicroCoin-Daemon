@@ -1,13 +1,10 @@
-language: generic
 sudo: required
-dist: bionic
+dist: trusty
+install: ./travis-lazarus/.travis.install.py
 
-before_install:
-  - sudo rm -f /var/cache/apt/archives/lock || true
-  - sudo rm -f /var/lib/dpkg/lock || true
-#  - sudo apt-get update
-  - sudo apt-get install -y lazarus
+os:
+  - linux
+  - osx
 
 script:
   - lazbuild MicroCoinD.lpi
-
