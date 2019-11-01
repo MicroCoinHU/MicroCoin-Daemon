@@ -127,7 +127,9 @@ uses
   MicroCoin.Net.Handlers.Message in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Message.pas',
   MicroCoin.Net.Handlers.NewBlock in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewBlock.pas',
   MicroCoin.Net.Handlers.NewTransaction in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewTransaction.pas',
-  MicroCoin.Common.Config in 'src\MicroCoin\Common\MicroCoin.Common.Config.pas';
+  MicroCoin.Crypto.BigNum in 'src\MicroCoin\Crypto\MicroCoin.Crypto.BigNum.pas',
+  MicroCoin.Crypto.Errors in 'src\MicroCoin\Crypto\MicroCoin.Crypto.Errors.pas',
+  MicroCoin.Crypto.Keys in 'src\MicroCoin\Crypto\MicroCoin.Crypto.Keys.pas';
 
 var quit : boolean;
 
@@ -142,30 +144,27 @@ procedure ConsoleThread.execute;
 var
   c:Char;
 begin
+  c := 'a';
   repeat
     if Console.KeyAvailable
     then c := Console.ReadKey.KeyChar;
     Sleep(1000);
+    TLog.NewLog(ltdebug, '', '');
   until c='q';
   quit := true;
 end;
 
 begin
-  {$IFDEF MSWINDOWS}
-//    Console.BufferHeight := 20;
-  {$ENDIF}
   quit := false;
   with TMicroCoinApplication.Create do begin
     ConsoleThread.Create(false);
     {$IFDEF MSWINDOWS}
     SetConsoleTitle('MicroCoin');
-//    SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE), GetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE)));
     {$ENDIF}
     while not quit do begin
       CheckSynchronize(1);
     end;
     Terminate;
-    OutputDebugString ('IMJ');
   end;
   try
   except
