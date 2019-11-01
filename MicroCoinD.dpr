@@ -43,12 +43,12 @@ uses
   {$ENDIF }
   {$IFDEF DEBUG}
   FastMM4,
-  {$ENDIF}
+  {$ENDIF }
   {$IFDEF MSWINDOWS}
   windows,
   Messages,
   System.Console,
-  {$ENDIF}
+  {$ENDIF }
   Classes,
   sysutils,
   MicroCoin.Account.AccountKey in 'src\MicroCoin\Account\MicroCoin.Account.AccountKey.pas',
@@ -126,7 +126,8 @@ uses
   MicroCoin.Net.Handlers.Hello in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Hello.pas',
   MicroCoin.Net.Handlers.Message in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.Message.pas',
   MicroCoin.Net.Handlers.NewBlock in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewBlock.pas',
-  MicroCoin.Net.Handlers.NewTransaction in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewTransaction.pas';
+  MicroCoin.Net.Handlers.NewTransaction in 'src\MicroCoin\Net\Handlers\MicroCoin.Net.Handlers.NewTransaction.pas',
+  MicroCoin.Common.Config in 'src\MicroCoin\Common\MicroCoin.Common.Config.pas';
 
 var quit : boolean;
 
@@ -145,7 +146,6 @@ begin
     if Console.KeyAvailable
     then c := Console.ReadKey.KeyChar;
     Sleep(1000);
-    TLog.NewLog(ltdebug, '', '');
   until c='q';
   quit := true;
 end;
