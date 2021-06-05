@@ -109,8 +109,8 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_ExeOutput>..\bin\$(Platform)\$(Config)</DCC_ExeOutput>
         <DCC_DcuOutput>..\dcu\$(Platform)\$(Config)</DCC_DcuOutput>
-        <VerInfo_Build>119</VerInfo_Build>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.119;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Build>120</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.120;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
         <DCC_IMPLICIT_STRING_CAST>false</DCC_IMPLICIT_STRING_CAST>
         <DCC_IMPLICIT_STRING_CAST_LOSS>false</DCC_IMPLICIT_STRING_CAST_LOSS>
@@ -200,7 +200,7 @@
         <DCCReference Include="src\MicroCoin\Node\MicroCoin.Node.Events.pas"/>
         <DCCReference Include="src\MicroCoin\Node\MicroCoin.Node.Node.pas"/>
         <DCCReference Include="src\MicroCoin\RPC\MicroCoin.RPC.Client.pas"/>
-        <DCCReference Include="src\MicroCoin\Rpc\MicroCoin.RPC.Handler.pas"/>
+        <DCCReference Include="src\MicroCoin\RPC\MicroCoin.RPC.Handler.pas"/>
         <DCCReference Include="src\MicroCoin\RPC\MicroCoin.RPC.MethodHandler.pas"/>
         <DCCReference Include="src\MicroCoin\RPC\MicroCoin.RPC.Plugin.pas"/>
         <DCCReference Include="src\MicroCoin\RPC\MicroCoin.RPC.PluginManager.pas"/>

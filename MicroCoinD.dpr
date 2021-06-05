@@ -47,9 +47,9 @@ uses
   {$IFDEF MSWINDOWS}
   windows,
   Messages,
-  {$IFNDEF FPC}
-  System.Console,
-  {$ENDIF}
+    {$IFNDEF FPC}
+    System.Console,
+    {$ENDIF}
   {$ENDIF}
   Classes,
   sysutils,
